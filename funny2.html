@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+  <head>
+    <title>Match Test2</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+      body{
+	      font-family: arial , "微軟正黑體";
+		  font-size:18px;
+	  }
+	  
+	  
+	  .radio {
+		display: inline-block;
+		width: 45%;
+		padding: 7px;
+		background-color: rgba(0, 0, 0, 0.7);
+		border: 1px solid #555555;
+		border-radius: 4px;
+		color: #FFFFFF;
+		cursor: pointer;
+	  }
+	  .progress {
+		height: 25px;
+	  }
+	  .progress-bar-danger {
+		background-color: #800080;
+	  }
+	.progress-bar {
+		line-height: 25px;
+	}
+    </style>
+  </head>
+
+  <body>
+<div class="container">
+  <h3>據說是美國哈佛大學超準心測: 3分鐘讓妳知道是否配對成功!!!</h3>
+	總共 26 題
+	<div class="progress">
+	<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+	  0% Complete
+	</div>
+	</div>
+  <div class="panel panel-default">
+  <div class="panel-body">
+  
+  <div id='test1' class="well">
+  <p>1.你的性別是?:</p>
+	<form id="myForm1"> 
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">女生</label><img class="img-responsive" src="https://attach.setn.com/newsimages/2019/07/26/2039316-XXL.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">男生</label><img class="img-responsive" src="https://assets.juksy.com/files/articles/96536/5de476cc304c4.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" onclick="next(1)">下一題 <span class="badge">2</span></button>
+  </form>
+  </div>
+  
+  <div id='test2' class="well">
+  <p>2.朋友來訪，妳想招待他們到台北幾個著名的觀光景點遊憩，請問妳會選擇下列哪個地方為第一優先？:</p>
+	<form id="myForm2">
+   	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">木柵動物園</label> <img class="img-responsive" src="https://www.zoo.gov.tw/upload/202104/17/202104171819035131.JPG"  width="460" height="345"> 
+    </div> 
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">淡水渡船頭</label> <img class="img-responsive" src="http://farm8.staticflickr.com/7153/6795288685_47f30abb8d_z.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">西門町
+      <label><input type="radio" name="optradio" value="1">台北101</label> <img class="img-responsive" src="https://image.cdn-eztravel.com.tw/X_w1ECgWVd2P8PeNJFmgnNuLmRqN6w7QPCwYgcVzFos/g:ce/aHR0cHM6Ly92YWNhdGlvbi5jZG4tZXp0cmF2ZWwuY29tLnR3L2ltZy9WRFIvVFAxXzM0MDk5Mjg1Ny5qcGc.jpg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">西門町</label> <img class="img-responsive" src="https://www.taiwan.net.tw/pic.ashx?qp=1/big_scenic_spots/pic_2254_3.jpg&sizetype=3"  width="460" height="345"> 
+    </div>
+
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn2b" onclick="next(2)">下一題 <span class="badge">3</span></button>
+  </form>
+  </div>
+  
+   <div id='test3' class="well">
+   <p>3.妳的個性偏向?:</p>
+	<form id="myForm3">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">開朗</label><img class="img-responsive" src="https://cdn-origin.cool-style.com.tw/cool/2018/11/d7eb-ikyziqx2371340.jpg"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">文靜</label><img class="img-responsive" src="https://images.chinatimes.com/newsphoto/2020-11-22/656/BE0300_P_01_03.jpg"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn3b" onclick="next(3)">下一題 <span class="badge">4</span></button>
+  </form>
+  </div>
+  
+    <div id='test4' class="well">
+	<p>4.妳的接受身高標準是?:</p>
+	<form id="myForm4">
+    	<div class="radio">
+      <label><input type="radio" name="optradio" value="4">150</label><img class="img-responsive" src="https://cdn2.ettoday.net/images/347/d347646.jpg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="2">160</label><img class="img-responsive" src="http://img.ltn.com.tw/Upload/ent/page/800/2017/04/13/phpGTGvNg.jpg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">170</label><img class="img-responsive" src="https://miro.medium.com/max/1400/1*HVts3OudUfJH_-0CY25N7A.jpeg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="3">180</label><img class="img-responsive" src="http://p1.ifengimg.com/cmpp/2016/12/24/10/3a7759ad-ff4d-4dc3-8d14-9977d362fa3a_size13_w500_h314.jpg"  width="460" height="345"> 
+    </div>
+
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="5">190</label><img class="img-responsive" src="https://bouncin.net/upload/FEATURE/Interview_08_Sam/02_new.jpg" width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn4b" onclick="next(4)">下一題 <span class="badge">5</span></button>
+  </form>
+  </div>
+  
+    <div id='test5' class="well">
+	<p>5.假日或放假日偏好:</p><img class="img-responsive" src="https://i.pinimg.com/736x/6f/34/88/6f3488f88896a7f8b067f840f80bf4f4.jpg"  width="460" height="345"> 
+	<form id="myForm5">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">偶爾在家耍廢偶爾出去玩</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">要出去玩</label>
+    </div>
+	 <div class="radio">
+      <label><input type="radio" name="optradio" value="3">要待在家耍廢</label> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(5)">下一題 <span class="badge">6</span></button>
+  </form>
+  </div>
+  
+      <div id='test6' class="well">
+	<p>6.妳現在住?:</p>
+	<form id="myForm6">
+        <div class="radio">
+      <label><input type="radio" name="optradio" value="2">北部</label><img class="img-responsive" src="http://cw1.tw/CW/images/article/C1435026225400.jpg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">中部</label><img class="img-responsive" src="http://3.blog.xuite.net/3/c/1/4/12199563/blog_3737486/txt/239695622/0.jpg"  width="460" height="345"> 
+    </div>
+	    <div class="radio">
+      <label><input type="radio" name="optradio" value="3">南部</label><img class="img-responsive" src="https://pic.pimg.tw/cjyyou/1491133551-4079336980.jpg?v=1491133641"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="4">東部</label><img class="img-responsive" src="https://pic.pimg.tw/hsw2756/1407500737-1796384742.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(6)">下一題 <span class="badge">7</span></button>
+  </form>
+  </div>
+  
+      <div id='test7' class="well">
+	<p>7.妳偏好的顏色:</p>
+	<form id="myForm7">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">紅</label><img class="img-responsive" src="https://puui.qpic.cn/qqvideo_ori/0/t05108ys57q_496_280/0"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">紫</label><img class="img-responsive" src="https://static.wikia.nocookie.net/kurokonobasuke/images/1/1d/Atsushi_Murasakibara_anime.png/revision/latest?cb=20140327194105"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">藍</label><img class="img-responsive" src="http://images.plurk.com/0e6735e6ac1b6c5838f6144c35cdccae.jpg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="2">黃</label><img class="img-responsive" src="https://pic.pimg.tw/vare168/1336303756-2301534838.jpg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">其他</label><img class="img-responsive" src="https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2018/01/26/20180126-053849_U7418_M374298_e2a0.GIF?itok=Qyx2BMZ0"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(7)">下一題 <span class="badge">8</span></button>
+  </form>
+  </div>
+  
+      <div id='test8' class="well">
+	<p>8.妳想養甚麼動物?:</p>
+	<form id="myForm8">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">狗</label><img class="img-responsive" src="https://media.zenfs.com/en/ebc.net.tw/1c771e273f037f6044e1a6564a03712c"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">貓</label><img class="img-responsive" src="https://cdn.hk01.com/di/media/images/dw/20211205/544170522670272512614079.jpeg/kBmExrj9__ij8GB5nicEP9OiephFCzQqELF_DRCxfw0?v=w1920r16_9"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="3">其他</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(8)">下一題 <span class="badge">9</span></button>
+  </form>
+  </div>
+      <div id='test9' class="well">
+	<p>9.如果另一半劈腿妳會?</p>
+	<form id="myForm9">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">不管原因一律封殺</label> <img class="img-responsive" src="https://cdn2.ettoday.net/images/247/d247860.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">視原因決定</label><img class="img-responsive" src="http://images.xuejuzi.cn/1607/1_160705202419_1.jpg"  width="460" height="345"> 
+    </div>
+	  <div class="radio">
+      <label><input type="radio" name="optradio" value="3">不管原因一律原諒</label><img class="img-responsive" src="https://pic.pimg.tw/lin08085/1410175338-1657027353.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(9)">下一題 <span class="badge">10</span></button>
+  </form>
+  </div>
+      <div id='test10' class="well">
+	<p>10.你最喜歡吃哪款味道的湯圓？:</p>
+	<form id="myForm10">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">黑芝麻</label><img class="img-responsive" src="https://img.cook1cook.com/upload/cover/8/1/24528139594069381.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">紫薯</label><img class="img-responsive" src="http://cp1.douguo.net/upload/caiku/6/8/9/600x400_6857451b00a7544b2da999ec78001d19.jpg"  width="460" height="345"> 
+    </div>
+	 <div class="radio">
+      <label><input type="radio" name="optradio" value="1">紅豆</label><img class="img-responsive" src="https://img-global.cpcdn.com/recipes/bc83c087980ced6b/1200x630cq70/photo.jpg"  width="460" height="345"> 
+    </div>
+	  <div class="radio">
+      <label><input type="radio" name="optradio" value="1">花生</label><img class="img-responsive" src="http://orsimages.unileversolutions.com/ORS_Images/Knorr_zh-HK/img1(69)_48_1.1.203_326X580.Jpeg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(10)">下一題 <span class="badge">11</span></button>
+  </form>
+  </div>
+      <div id='test11' class="well">
+	<p>11.喜歡做自己或配合他人:</p>
+	<form id="myForm11">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">是，總是做自己!</label><img class="img-responsive" src="http://uploads-cdn.xjy.cn/2018/01/30/5a7038d5c38a4.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">否，配合別人(在別人的生活跑龍套!!)</label><img class="img-responsive" src="http://img3.cache.netease.com/photo/0003/2010-05-27/67N5GPG233UP0003.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(11)">下一題 <span class="badge">12</span></button>
+  </form>
+  </div>
+      <div id='test12' class="well">
+	<p>12.不喜歡大男人主義:</p>
+	<form id="myForm12">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">是，不喜歡大男人主義</label><img class="img-responsive" src="http://i2.sinaimg.cn/fashion/2015/0911/U3978P1503DT20150911160614.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">否，當個無聲的人(無魂有體親像稻草人)</label><img class="img-responsive" src="https://i.ytimg.com/vi/Ux6P1et8UUA/hqdefault.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(12)">下一題 <span class="badge">13</span></button>
+  </form>
+  </div>
+      <div id='test13' class="well">
+	<p>13.願意互相分享喜怒哀樂:</p>
+	<form id="myForm13">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">是，有福同享有難同當</label><img class="img-responsive" src="https://emilyuu.files.wordpress.com/2013/10/2012-10-04_ashin_650.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">否，我的隱私就是我的隱私 你的隱私還是我的隱私</label><img class="img-responsive" src="http://www.twword.com/uploads/wiki/e7/92/660923_3.jpg"  width="460" height="345"> 
+    </div>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(13)">下一題 <span class="badge">14</span></button>
+  </form>
+  </div>
+      <div id='test14' class="well">
+	<p>14.會抽菸或喝酒嗎?:</p>
+	<form id="myForm14">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">不會抽菸跟喝酒</label>
+    </div>
+	 <div class="radio">
+      <label><input type="radio" name="optradio" value="2">抽的不是菸是寂寞XD</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="3">會抽菸跟喝酒</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(14)">下一題 <span class="badge">15</span></button>
+  </form>
+  </div>
+      <div id='test15' class="well">
+	<p>15.妳單身嗎?:</p>
+	<form id="myForm15">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">單身</label><img class="img-responsive" src="https://cc.tvbs.com.tw/img/upload/2018/09/05/20180905122336-16075a76.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">騎驢找馬中..摳摳摳</label><img class="img-responsive" src="https://img.okeinfo.net/content/2017/02/13/196/1617127/beginilah-hubungan-yang-tak-saling-menghormati-perlahan-hancur-VnjsGOlBcO.jpg"  width="460" height="345"> 
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="3">非單身</label><img class="img-responsive" src="https://pic.dmjnb.com/pic/23a111c23e7464df0e7d2d4e63a5f362"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(15)">下一題 <span class="badge">16</span></button>
+  </form>
+  </div>
+  
+  
+    <div id='test16' class="well">
+	<p>16.妳接受對方有女性友人嗎?:</p>
+	<form id="myForm16">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">接受，因為我也有男性友人</label><img class="img-responsive" src="http://1.bp.blogspot.com/_cti2zjhkKvQ/SypQlQ1zJUI/AAAAAAAAASc/7F8XzVadgQU/s400/120136092HF13MK.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">不接受，直接斷絕一切關係</label><img class="img-responsive" src="http://www.angelhome.org/upload/image/meitibaodao/Img264047916.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(16)">下一題 <span class="badge">17</span></button>
+  </form>
+  </div>
+  
+    <div id='test17' class="well">
+	<p>17.想像妳是一個小胖胖，正在很努力減肥，朋友卻想請妳吃大餐。妳覺得他的心態是？:</p>
+	<form id="myForm17">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">只是順便叫妳吃飯，沒什麽意思</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">逗你開心，希望妳輕鬆一點。</label>
+    </div>
+	 <div class="radio">
+      <label><input type="radio" name="optradio" value="1">考驗你的意志力</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="4">根本就是故意取笑妳</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(17)">下一題 <span class="badge">18</span></button>
+  </form>
+  </div>
+  
+    <div id='test18' class="well">
+	<p>18.偏好的音樂類型?:</p>
+	<form id="myForm18">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">抒情</label><img class="img-responsive" src="https://www.sciencevocal.com/wp-content/uploads/2019/03/800x420.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">饒舌</label><img class="img-responsive" src="https://cdn2.ettoday.net/images/2723/d2723503.jpg"  width="460" height="345"> 
+    </div>
+	  <div class="radio">
+      <label><input type="radio" name="optradio" value="1">其他</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(18)">下一題 <span class="badge">19</span></button>
+  </form>
+  </div>
+    <!--    <div id='test19' class="well">
+	<p>19.最近下雨不斷，好不容易約出心儀已久的對象，進行兩人的第一次約會，出門前卻又下起大雨，這時的妳會有什麼反應？:</p><img class="img-responsive" src="http://other.zaojv.com/simage/669/3129669.jpg"  width="460" height="345">
+	<form id="myForm19">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">立刻想出個雨天活動備案</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">決定取消約會，改天再約</label>
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">心情沮喪，提不起勁</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(19)">下一題 <span class="badge">20</span></button>
+  </form>
+  </div>-->
+  
+          <div id='test19' class="well">
+	<p>19.明天要吃喜酒了，而且被耳提面命穿著要得宜!，妳會選擇穿哪一件?:</p>
+	<form id="myForm19">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1"><img class="img-responsive" src="https://i.imgur.com/vCYVQJK.jpg"></label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1"><img class="img-responsive" src="https://i.imgur.com/NKGru8g.jpg"></label>
+    </div>
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1"><img class="img-responsive" src="https://i.imgur.com/rxJhCWW.jpg" ></label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(19)">下一題 <span class="badge">20</span></button>
+  </form>
+  </div>
+  
+  
+    <div id='test20' class="well">
+	<p>20.喜歡看漫畫看書還是攝影嗎?:</p>
+	<form id="myForm20">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">看漫畫看書</label><img class="img-responsive" src="https://cdn2.ettoday.net/images/843/d843100.jpg"  width="460" height="345">
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">攝影</label><img class="img-responsive" src="http://78.media.tumblr.com/b4ad29526d3e6bce02eecc20e41d0488/tumblr_inline_nx0kaqEDgM1tyc2jx_540.jpg"  width="460" height="345">
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(20)">下一題 <span class="badge">21</span></button>
+  </form>
+  </div>
+  
+    <div id='test21' class="well">
+	<p>21.妳覺得妳聰明嗎?:</p>
+	<form id="myForm21">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">聰明</label><img class="img-responsive" src="https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2016/07/04/20160704-103556_U3792_M171507_d587.jpg?itok=eDNvvL31"  width="460" height="345"> 
+    </div>
+	    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">普通普通</label><img class="img-responsive" src="https://fsv.cmoney.tw/cmstatic/notes/capture/232701/20150727154305175.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="3">不聰明</label><img class="img-responsive" src="http://pic.pimg.tw/emelytsai/1382254636-72958647.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(21)">下一題 <span class="badge">22</span></button>
+  </form>
+  </div>
+  
+  
+    <div id='test22' class="well">
+	<p>22.有穩定工作嗎?:</p>
+	<form id="myForm22">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">有!</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">沒有QQ</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(22)">下一題 <span class="badge">23</span></button>
+  </form>
+  </div>
+  
+    <div id='test23' class="well">
+	<p>23.喜歡看電影或電視嗎?:</p>
+	<form id="myForm23">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">喜歡</label>
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">不喜歡</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(23)">下一題 <span class="badge">24</span></button>
+  </form>
+  </div>
+  
+     <div id='test24' class="well">
+	<p>24.喜歡小孩嗎?:</p>
+	<form id="myForm24">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">喜歡</label><img class="img-responsive" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsnNdifOrfTsHsTsLXRirRdVz2cVBd1PX8dg&usqp=CAU"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">不喜歡</label><img class="img-responsive" src="https://ibw.bwnet.com.tw/image/pool/2016/12/9e0c2644906d1fbc0998ae74894d9b9c_620.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(24)">下一題 <span class="badge">25</span></button>
+  </form>
+  </div>
+  
+   <div id='test25' class="well">
+	<p>25.妳的年齡?:</p>
+	<form id="myForm25">
+	<div class="radio">
+      <label><input type="radio" name="optradio" value="1">20-30</label><img class="img-responsive" src="https://media.nownews.com/nn_media/thumbnail/2022/03/1647051172661-204458b9a1a7436bad81c0b507a94c17-800x450.jpg?unShow=false"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">30-40</label><img class="img-responsive" src="https://p1-tt.byteimg.com/origin/pgc-image/0ddc322a57ad43e08377e0cc2a789127?from=pc"  width="460" height="345"> 
+    </div>
+	  <div class="radio">
+      <label><input type="radio" name="optradio" value="3">40-50</label><img class="img-responsive" src="https://pgw.udn.com.tw/gw/photo.php?u=https://uc.udn.com.tw/photo/2021/08/29/realtime/13631597.jpeg&x=0&y=0&sw=0&sh=0&sl=W&fw=1050"  width="460" height="345"> 
+    </div>
+	 <div class="radio">
+      <label><input type="radio" name="optradio" value="4">其他..</label>
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(25)">下一題 <span class="badge">26</span></button>
+  </form>
+  </div>
+  
+  
+    <div id='test26' class="well">
+	<p>26.偏好文科還是理工科男生?:</p>
+	<form id="myForm26">
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="1">理工科</label><img class="img-responsive" src="http://img3.cache.netease.com/daxue/2013/12/18/201312181002379bfad.jpg"  width="460" height="345"> 
+    </div>
+    <div class="radio">
+      <label><input type="radio" name="optradio" value="2">文科</label><img class="img-responsive" src="http://pic.pimg.tw/john547/1352808997-1734484724.jpg"  width="460" height="345"> 
+    </div>
+	 <div class="radio">
+      <label><input type="radio" name="optradio" value="3">都不是是醫科!</label><img class="img-responsive" src="http://kenshin.hk/blog/jdnews/201310/20131101-1.jpg"  width="460" height="345"> 
+    </div>
+	</br>
+	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next2(26)">完成</button>
+  </form>
+  </div>
+  
+    </div>
+  </div>
+  
+          <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title modeltitle"></h3>
+              </div>
+              <div class="modal-body">
+                <p class="modeltext"> </p>
+				<p> <img class="img-responsive modelimg" src=""> </p>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-info btn-block" data-dismiss="modal">關閉</button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+</div>
+    <script>
+	$(document).ready(function(){
+		for(i=2;i<=50;i++){
+			$("#test"+i).hide();
+		}
+		
+	 });
+		 var total=0; 
+		 var progress=0;
+		 var submited=0;
+		 
+
+		 function next(i) {
+			
+				var checked =$('input[name=optradio]:checked', '#myForm'+i).val();
+				if (checked == null) {
+					alert("請至少選擇一項");
+				}else{
+				    $("html, body").animate({ scrollTop: 0 }, "slow");
+					if($('input[name=optradio]:checked', '#myForm'+i).val()== 1){
+						total = total+8;
+					}else if($('input[name=optradio]:checked', '#myForm'+i).val()== 2){
+						total = total+3;
+					}else if($('input[name=optradio]:checked', '#myForm'+i).val()== 3){
+						total = total+2;
+					}else if($('input[name=optradio]:checked', '#myForm'+i).val()== 4){
+						total = total+1;
+					}
+					$("#test"+i).hide();
+					//alert((total/(8*i))*100+"%");
+					i=i+1;
+					progress=Math.round(i/26*100);
+					$("#test"+i).show();
+					$(".progress-bar").attr("aria-valuenow",progress);
+					$(".progress-bar").attr("style","width:"+progress+"%");
+					$(".progress-bar").html(progress+"% Complete");
+				}
+				/*var rgb = [];
+
+				for(var i = 0; i < 3; i++)
+					rgb.push(Math.floor(Math.random() * 255));
+					$("body").css("background-color", 'rgb('+ rgb.join(',') + ')');*/
+				/*if(total >= 3) {
+				  $('#myModal').modal('show');
+		}*/
+		 } 
+
+		function next2(i) {
+				
+				var checked =$('input[name=optradio]:checked', '#myForm'+i).val();
+				if (checked == null) {
+					alert("請選擇一項");
+				}else{
+					if(submited==0){
+						submited = 1;
+						if($('input[name=optradio]:checked', '#myForm'+i).val()== 1){
+							total = total+8;
+						}else if($('input[name=optradio]:checked', '#myForm'+i).val()== 2){
+							total = total+4;
+						}else if($('input[name=optradio]:checked', '#myForm'+i).val()== 3){
+							total = total+2;
+						}else if($('input[name=optradio]:checked', '#myForm'+i).val()== 4){
+							total = total+1;
+						}
+					}
+					//$("#test"+i).hide();
+					//alert((total/(4*i))*100+"%");
+					$('#myModal').modal('show');
+					$(".modeltext").html("配對率"+(total/(8*i))*100+"%");
+					if((total/(8*i))*100 >= 80) {
+						$(".modeltitle").html("超級速配!趕快在一起~~~(誤)");
+						$(".modelimg").attr("src","http://gb.cri.cn/mmsource/images/2013/01/07/93/17082776461414981741.jpg");
+					}else if((total/(8*i))*100 >= 60){
+						$(".modeltitle").html("配對成功!!一起去約會吧XD");
+						$(".modelimg").attr("src","https://pic.pimg.tw/kcnlp/1367722544-509597326.jpg");
+					}else{
+						$(".modeltitle").html("配對失敗，再接再厲QQ");
+						$(".modelimg").attr("src","https://img.toy-people.com/imgur/165059196144.png");
+					}
+					
+				}
+				/*if(total >= 3) {
+				  $('#myModal').modal('show');
+		}*/
+		 }  
+		 
+	    /*function prev(i) {
+				$("#test"+i).hide();
+				i=i-1;
+				$("#test"+i).show();
+				
+		 }*/ 
+	  
+	  
+	 /* $("#btn1b").click(function(){
+		   // alert($('input[name=optradio]:checked', '#myForm').val()); 
+		$("#test2").show();
+		$("#test1").hide();
+		if($('input[name=optradio]:checked', '#myForm').val()==1){
+			total = total+1;
+		}else{
+			total = total+2;
+		}
+	  });
+	  $("#btn2a").click(function(){
+			//alert($('input[name=optradio]:checked', '#myForm').val()); 
+		    $("#test2").hide();
+			$("#test1").show();			
+	  });
+	  $("#btn2b").click(function(){
+			//alert($('input[name=optradio]:checked', '#myForm').val()); 	
+		    $("#test3").show();
+			$("#test2").hide();
+			if($('input[name=optradio]:checked', '#myForm2').val()==1){
+				total = total+1;
+			}else{
+				total = total+2;
+			}
+	  });*/
+    </script>
+  </body>
+
+</html>
