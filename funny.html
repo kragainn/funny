@@ -417,6 +417,7 @@
       var count = 0;
       var sum1 = 0;
       var sum2 = 0;
+	  var open = 0;
       //初始化
       for (i = 1; i <= 5; i++) {
         block[i] = new Array(6);
@@ -460,10 +461,11 @@
         if (sum2 == 5) {
           count++;
         }
-		if(count >= 3) {
+		if(count >= 3 &&open==0) {
 		  $(".modeltext").html("哇!在一起~~~(誤)");
 		  $(".modelimg").attr("src","./image/love.jpg");
           $('#myModal').modal('show');
+		  open=1;
 		}
 		/*if (count == 12) {
 		  $(".modeltext").html("哇!完全符合，在一起~~~(誤)");
