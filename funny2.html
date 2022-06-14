@@ -2,7 +2,7 @@
 <html lang="zh-Hant-TW">
 
   <head>
-    <title>Match Test2</title>
+    <title>巧虎的心理測驗2</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -53,8 +53,8 @@
 
   <body>
 <div class="container">
-  <h3>據說是美國哈佛大學超準心測: 3分鐘讓妳知道是否配對成功!!!</h3>
-	總共 26 題
+  <h3 class="text-center">據說是美國哈佛大學超準心測: 3分鐘讓妳知道是否配對成功!!!</h3>
+	<p class="text-center">總共 26 題</p>
 	<div class="progress">
 	<div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
 	  0% Complete
@@ -113,13 +113,13 @@
   </div>
   
     <div id='test4' class="well">
-	<p>4.妳的接受身高標準是?:</p>
+	<p>4.妳的接受身高標準是(以上)?:</p>
 	<form id="myForm4">
     	<div class="radio">
       <label><input type="radio" name="optradio" value="4">150</label><img class="img-responsive" src="https://cdn2.ettoday.net/images/347/d347646.jpg"  width="100%" height="345"> 
     </div>
 	<div class="radio">
-      <label><input type="radio" name="optradio" value="2">160</label><img class="img-responsive" src="http://img.ltn.com.tw/Upload/ent/page/800/2017/04/13/phpGTGvNg.jpg"  width="100%" height="345"> 
+      <label><input type="radio" name="optradio" value="1">160</label><img class="img-responsive" src="http://img.ltn.com.tw/Upload/ent/page/800/2017/04/13/phpGTGvNg.jpg"  width="100%" height="345"> 
     </div>
 	<div class="radio">
       <label><input type="radio" name="optradio" value="1">170</label><img class="img-responsive" src="https://miro.medium.com/max/1400/1*HVts3OudUfJH_-0CY25N7A.jpeg"  width="100%" height="345"> 
@@ -129,7 +129,7 @@
     </div>
 
 	<div class="radio">
-      <label><input type="radio" name="optradio" value="5">190</label><img class="img-responsive" src="https://bouncin.net/upload/FEATURE/Interview_08_Sam/02_new.jpg" width="100%" height="345"> 
+      <label><input type="radio" name="optradio" value="5">190</label><img class="img-responsive" src="https://image.cache.storm.mg/styles/smg-800x533-fp/s3/media/image/2019/11/29/20191129-050125_U16223_M572665_d5ee.jpg?itok=dIUkeWfn" width="100%" height="345"> 
     </div>
 	</br>
 	<button type="button" class="btn btn-info btn-block" id="btn4b" onclick="next(4)">下一題 <span class="badge">5</span></button>
@@ -310,11 +310,8 @@
     <div class="radio">
       <label><input type="radio" name="optradio" value="1">單身</label><img class="img-responsive" src="https://cc.tvbs.com.tw/img/upload/2018/09/05/20180905122336-16075a76.jpg"  width="100%" height="345"> 
     </div>
-    <div class="radio">
-      <label><input type="radio" name="optradio" value="2">騎驢找馬中..摳摳摳</label><img class="img-responsive" src="https://img.okeinfo.net/content/2017/02/13/196/1617127/beginilah-hubungan-yang-tak-saling-menghormati-perlahan-hancur-VnjsGOlBcO.jpg"  width="100%" height="345"> 
-    </div>
 	<div class="radio">
-      <label><input type="radio" name="optradio" value="3">非單身</label><img class="img-responsive" src="https://pic.dmjnb.com/pic/23a111c23e7464df0e7d2d4e63a5f362"  width="100%" height="345"> 
+      <label><input type="radio" name="optradio" value="2">非單身</label><img class="img-responsive" src="https://pic.dmjnb.com/pic/23a111c23e7464df0e7d2d4e63a5f362"  width="100%" height="345"> 
     </div>
 	</br>
 	<button type="button" class="btn btn-info btn-block" id="btn5b" onclick="next(15)">下一題 <span class="badge">16</span></button>
@@ -625,7 +622,7 @@
 						$(".modelimg").attr("src","https://static.popdaily.com.tw/u/202008/325fc3b1-6224-4fff-b95e-330ec30d8e51.jpg");
 					}else if((total/(8*i))*100 >= 60){
 						$(".modeltitle").html("配對成功!!一起去約會吧XD");
-						$(".modelimg").attr("src","https://www.ttv.com.tw/drama12/TakeMeOutTaiwan/images/op.jpg");
+						$(".modelimg").attr("src","https://en.pimg.jp/023/630/752/1/23630752.jpg");
 					}else{
 						$(".modeltitle").html("配對失敗，再接再厲QQ");
 						$(".modelimg").attr("src","https://img.toy-people.com/imgur/165059196144.png");
